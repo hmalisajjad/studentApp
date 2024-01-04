@@ -3,7 +3,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Welcome to Home Page")
+    students = None
+    return render(request,'home.html',{'students':students})
 
 def student(request, student_id):
-    return HttpResponse(f"Hello student id {student_id}")
+    student = None
+    return render(request,'student.html',{'student':student})
